@@ -1,7 +1,8 @@
 #!/bin/bash
 
-echo "please enter your practice purpose"
+echo "please enter your name::"
 
-echo "you have been entered this $USERNAME"
+read CALVEN
 
-read USERNAME
+
+ECHO 'YOU NAME IS $CALVIN"
