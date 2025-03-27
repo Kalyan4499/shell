@@ -2,7 +2,7 @@
 
 echo "please enter your name::"
 
-read CALVEN
+read CALVIN
 
 
-ECHO 'YOU NAME IS $CALVIN"
+echo "your name is $CALVIN"
