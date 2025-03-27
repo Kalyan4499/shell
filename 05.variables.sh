@@ -2,4 +2,4 @@
 
 echo "please enter your practice purpose"
 
-echo "you have been entered this"
+echo "you have been entered this $USERNAME"
