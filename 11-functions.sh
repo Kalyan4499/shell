@@ -1,20 +1,20 @@
 #!/bin/bash
 
-USERID=$(id -u)
+USERID=$(id-u)
 
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo "$2 is failure"
+        echo "$2:: failure"
         exit 1
     else
-        echo "$2 is success"
-    fi 
+        echo "$2:: success"
+    fi
 }
 
 if [ $USERID -ne 0 ]
 then
-    echo "it requires root user credentials"
+    echo "it requires root privilages"
     exit 1
 fi
 
@@ -23,17 +23,17 @@ dnf list installed mysql
 if [ $? -ne 0 ]
 then
     dnf install mysql -y
-    VALIDATE $? "installing mysql"
+    VALIDATE $1 "INSTALLING MYSQL"
 else
-    echo "mysql is already installed"
+    echo "mysql already installed"
 fi
 
-dnf list installed git 
+dnf list installed git
 
 if [ $? -ne 0 ]
 then
     dnf install git -y
-    VALIDATE $? "installing git"
+    VALIDATE $1 "INSTALLING GIT"
 else
-    echo "git is already installed"
+    echo "git already installed"
 fi
